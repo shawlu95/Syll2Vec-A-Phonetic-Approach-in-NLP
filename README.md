@@ -23,7 +23,7 @@ Traditionally, morphemes have been studied as the smallest semantic unit (e.g. b
 
 This project explores the efficacy of using phonemes as basic unit of embedding. Whereas character embedding is purely based on morphology (how letters are arranged), phoneme embedding are phonetically based (referred to as 'syllable' embedding for the rest of the report). The basic assumption for character embedding is that words that are spelled similarly should have similar meaning. The assumption for syllable embedding is that words that are made of similar sound should have similar meaning.
 
-The hypothesis of this project is that syllabus embedding can be equally helpful in English language as in Korean, and more helpful than character embedding. The line of reasoning is that although character embedding have small vocabulary size (upper case, lowercase letters, numbers, special characters). The possible permutation is huge. The character decomposition of a word of length $n$ results in $52^n$ possible permutation (considering upper and lower case letters only). 
+The hypothesis of this project is that syllabus embedding can be equally helpful in English language as in Korean, and more helpful than character embedding. The line of reasoning is that although character embedding have small vocabulary size (upper case, lowercase letters, numbers, special characters). The possible permutation is huge. The character decomposition of a word of length *n* results in *52<sup>n</sup>* possible permutation (considering upper and lower case letters only). 
 
 
 In contrast, a word can be conveniently separated into syllables, and many out-of-vocabulary words are combination of reusable syllables. A long word, such as "stationary" can be broken into three-syllable "sta-tion-ary" instead of nine-letter combination. The exponent drops from 9 to 3, and the possible permutations are greatly reduced from |V<sub>c</sub>|<sup>9</sup> to |V<sub>s</sub>|<sup>3</sup> (five magnitude lower). A neural net with good learned embedding for the three syllables should learn that the vocabulary is an adjective that relates to a state (as "ary" from binary, planetary, military, and "tion" in action, condition, motion).
@@ -79,7 +79,7 @@ The syllable embedding is incorporated through the following process. The syllab
 The R-net implementation is ultimately unsuccessful. While the model could train without crash, the negative log loss remains mysteriously negative all the time. R-net implementation from GitHub is used as reference, which also turns out to be broken and poorly implemented. In the end, the project proceeds with the BiDAF model only, and acquires the following result
 
 <p align="center">
-    <img src="plot/table.png" width="500">
+    <img src="plot/table.png" width="400">
 </p>
 
 All three variants –– word embedding with (1) character embedding, (2) syllable embedding, (3) both character and syllable embedding beat the baseline definitively. Among the three variants, character embedding achieves the best score in Dev NLL, F1 and EM. The other two variants with syllable embedding oscillate at similar level, but began to overfit after 2.5 million iteration, which is evident in the rising NLL curve. When combining syllable and character together with word embedding, the model clearly overfit the data, which is evident from the rise of dev NLL curve above ever other model, and the corresponding decline in EM and F1 scores. The syllable embedding model achieves the 23rd place on the leaderboard.
@@ -101,7 +101,7 @@ This project explores the efficacy of syllable embedding as a complement to char
 In conclusion, the topic of syllable embedding is severely lacking attention in the English language NLP literature, because English is widely regarded as a non-agglutinated language the way Korean and Arabic are. However, English language has evolved to incorporates variety of foreign words (from French, German, Latin etc.), many of which retained their native spelling but adopted English phonemes. Syllable embedding has the potential to capture the phonetic similarity between those words with peculiar spelling, in a way that morphology based embedding cannot.
 
 #### Acknowledgments
-I'd like to thank all Stanford University CS224N teaching staff for all the resources and support that make this project possible. I'm taking this course P/NP, but enjoyed the learning process very much, and ended up learning more than I could expect.
+I'd like to thank all Stanford University CS224N teaching staff for all the resources and support that make this project possible.
 
 #### References
 [1] 2017.R-Net:MachineReadingComprehensionwithSelf-MatchingNetworksNaturalLanguage Computing Group, Microsoft Research Asia
