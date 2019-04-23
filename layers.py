@@ -1,6 +1,7 @@
-"""Assortment of layers for use in models.py.
+"""Assortment of BiDAF layers for use in models.py.
 
 Author:
+    Xiao Lu (shawlu@stanford.edu)
     Chris Chute (chute@stanford.edu)
 """
 

@@ -1,4 +1,4 @@
-name: squat
+name: squad
 channels:
   - pytorch
   - conda-forge

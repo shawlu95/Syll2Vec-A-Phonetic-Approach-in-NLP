@@ -8,6 +8,7 @@ Usage:
     > NAME is a name to identify the test run
 
 Author:
+    Xiao Lu (shawlu@stanford.edu)
     Chris Chute (chute@stanford.edu)
 """
 

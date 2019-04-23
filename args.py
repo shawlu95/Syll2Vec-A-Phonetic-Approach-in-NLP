@@ -1,6 +1,7 @@
 """Command-line arguments for setup.py, train.py, test.py.
 
 Author:
+    Xiao Lu (shawlu@stanford.edu)
     Chris Chute (chute@stanford.edu)
 """
 

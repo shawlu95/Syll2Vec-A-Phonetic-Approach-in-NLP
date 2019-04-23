@@ -1,6 +1,7 @@
 """Top-level model classes.
 
 Author:
+    Xiao Lu (shawlu@stanford.edu)
     Chris Chute (chute@stanford.edu)
 """
 

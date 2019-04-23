@@ -1,6 +1,7 @@
 """Utility classes and methods.
 
 Author:
+    Xiao Lu (shawlu@stanford.edu)
     Chris Chute (chute@stanford.edu)
 """
 import logging
