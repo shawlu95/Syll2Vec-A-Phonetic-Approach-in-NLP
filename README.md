@@ -76,13 +76,6 @@ Out of the original sentences dataset, a total number of 21701 distinct words we
 
 The syllable embedding is incorporated through the following process. The syllabify module maps every English word in the word embedding to its syllable constituents. The syllable embedding are looked up by index. Those without embedding are replaced with --OOV-- token. The dimension of the loaded syllable embedding for each batch is (batch size, sentence length, max word length measured in syllable, syllable embedding size). After being looked up, the question embedding and context embedding are concatenated with the word embedding, just as character embedding are concatenated with word embedding.
 
-<p align="center">
-    <img src="plot/size.png" width="350">
-    <img src="plot/syll2vec.png" width="350">
-  
-    Figure 1: Growth rate of syllable size versus vocabulary size
-</p>
-
 The R-net implementation is ultimately unsuccessful. While the model could train without crash, the negative log loss remains mysteriously negative all the time. R-net implementation from GitHub is used as reference, which also turns out to be broken and poorly implemented. In the end, the project proceeds with the BiDAF model only, and acquires the following result
 
 <p align="center">
