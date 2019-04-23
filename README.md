@@ -5,9 +5,9 @@ Implemented (in PyTorch) syllable embedding in a bidirectional attention flow (B
 * [Handout](writeup/DFP_Handout.pdf): instructions on how to set up environment, download datasets, and train the baseline models. 
 * [layers.py](layers.py): Definition of layers for the Bi-directional Attention Flow RNN model.
 * [layers_rnet.py](layers_rnet.py): Definition of layers for the R-net RNN model.
+* [models.py](models.py): Definition of BiDAF and R-net models.
 * [syl2vec64d](syl2vec64d/run.py): pre-train word and syllable embedding on Stanford tree sentiment dataset.
 * [syllabify](syllabify/syll_prep.ipynb): transform English text to syllables.
-* [models.py](models.py): Definition of BiDAF and R-net models.
 * [train.py](train.py): training model on Stanford Question-and-Answering Dataset (SQuAD).
 * [test.py](test.py): evaluating model on the testset for leaderboard submission.
 
