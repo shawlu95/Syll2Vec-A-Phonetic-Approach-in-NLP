@@ -1,4 +1,4 @@
-## Syll2Vec: A Phonetic Approach in Reading Comprehension
+## Syll2Vec: A Phonetic Approach in Machine Reading Comprehension
 
 #### Key Modules
 Implemented (in PyTorch) syllable embedding in a bidirectional attention flow (BiDAF) recurrent neural net.
